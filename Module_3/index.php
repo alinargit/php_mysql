@@ -49,24 +49,46 @@ if ($score >= 90 && $score <= 100) {
 $grade = 'B';
 switch($grade){
     case 'A':
-        echo "Excellent! You got an A<br>";
+        echo "Excellent! You got an A <br>";
         break;
     case 'B':
-        echo "Good Job! You got a B<br>";
+        echo "Good Job! You got a B <br>";
         break;
     case 'C':
-        echo "Well Done! You got a C<br>";
+        echo "Well Done! You got a C <br>";
         break;
     case 'D':
-        echo "You Passed, but you need to study more!<br>";
+        echo "You Passed, but you need to study more! <br>";
         break;
     case 'f':
-        echo "You failed the test! You got a F<br>";
+        echo "You failed the test! You got a F <br>";
         break;
     default:
-    echo 'Invalid Grade!!<br>';
+    echo 'Invalid Grade!! <br>';
     break;
 }
 
+for ($x = 0; $x <= 10; $x++){
+    echo "The number is $x <br>";
+}
 
+$x = 1;
+do{
+    echo "The number is $x <br>";
+    $x++;
+} while ($x <= 5);
+
+$x = 1;
+while ($x <=5){
+    echo "The number is $x<br>";
+    $x++;
+};
+$car = array("BMW", "VW", "Audi", "Tesla");
+    foreach($car as $value){
+        echo "$value <br>";
+    }
+$age = array("John"=>"18", "Michael"=>"23", "Joe"=>"10");
+    foreach($age as $x => $val) {
+        echo "$x=$val <br>";
+    }
 ?>
