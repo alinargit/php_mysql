@@ -2,9 +2,9 @@
 $host = 'localhost';
 $user = 'root';
 $pass = "";
-$db = "testdb";
+$db = "new_db";
 try{
-    $pdo = new PDO("mysql:host=$host; dbname=$db",$user, $pass);
+    $pdo = new PDO( "mysql:host=$host; dbname=$db",$user, $pass);
 
     // $sql = "CREATE TABLE users (id INT(6) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     // username VARCHAR(30) NOT NULL,
@@ -25,7 +25,7 @@ try{
     //Excecute the statement using exec() method od the PDO object
 
     $pdo -> exec($sql);
-
+    $last_id = $pdo -> lastInsertId(); 
     echo"New record created successfully.";
 
 }catch(Exception $e){
